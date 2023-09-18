@@ -79,7 +79,6 @@ public class APIHelper {
         String token;
     }
 
-
     @Value
     public static class APICardInfo {
         String id;
@@ -88,7 +87,7 @@ public class APIHelper {
     }
 
     @Value
-    public static class APITransferInfo{
+    public static class APITransferInfo {
         String from;
         String to;
         int amount;

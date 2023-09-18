@@ -24,7 +24,7 @@ public class APISQLTest {
     }
 
     @Test
-    public void transferFromTheFirstCardToTheSecond (){
+    public void transferFromTheFirstCardToTheSecond() {
         var authinfo = DataHelper.getAuthInfoWithTestData();
         APIHelper.makeQueryToLogin(authinfo, 200);
         var verificationCode = SQLHelper.getVerificationCode();
@@ -41,6 +41,6 @@ public class APISQLTest {
         var actualFirstCardBalance = cardsBalances.get(DataHelper.getFirstCardInfo().getId());
         var actualSecondCardBalance = cardsBalances.get(DataHelper.getSecondCardInfo().getId());
         assertAll(() -> assertEquals(firstCardBalance - amount, actualFirstCardBalance),
-                () ->  assertEquals(secondCardBalance + amount, actualSecondCardBalance));
+                () -> assertEquals(secondCardBalance + amount, actualSecondCardBalance));
     }
 }
